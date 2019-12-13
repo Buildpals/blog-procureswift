@@ -1,0 +1,18 @@
+1. users
+    - email
+    - password
+    - avatar
+    - name
+2. post
+    - title
+    - header img
+    - body
+
+3. Newsletter
+    - email
+
+
+User has many blog post.
+A blog post belongs to a user.
+
+User creates 
