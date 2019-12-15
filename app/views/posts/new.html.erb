@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_with scope: :post, url: posts_url, local: true do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title, { class: 'form-control' } %>
+    </p>    
+    <p>
+      <%= form.label :content %><br>
+      <%= form.rich_text_area :content %>
+    </p>
+    <p>
+      <%= form.file_field :main_image, direct_upload: true %>
+    </p>
+    
+    <p>
+      <%= form.submit class: 'btn btn-warning mt-3 float-right' %>
+    </p>
+  <% end %>
+</div>

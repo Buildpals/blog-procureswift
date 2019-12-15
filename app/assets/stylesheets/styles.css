@@ -224,6 +224,73 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 .load-more-btn:hover{ transform: translateY(-2px); box-shadow: 5px 10px 20px rgba(0,0,0,.3); } 
 
 
+/* ---------------------------------
+5. BLOG POST
+--------------------------------- */
+
+.post-area .post-info{ position: relative; padding: 30px 0; }
+
+.post-area .post-info .left-area{ height: 70px; width: 70px; border-radius: 100px; overflow: hidden; position: absolute;
+	top: 50%; margin-top: -35px; border: 6px solid #fff; box-shadow: 0px 0px 5px rgba(0,0,0,.3); }
+
+.post-area .post-info .middle-area{ padding-left: 90px; display: inline-block; }
+
+.post-area .post-info .date{ display: inline-block; color: #999; }
+
+.post-area .post-info .right-area{ float: right; }
+
+
+/* ---------------------------------
+6. MAIN POST
+--------------------------------- */
+
+.main-post{ margin-top: -100px; padding: 50px 0px 20px; box-shadow: 0px 0px 5px rgba(0,0,0,.1); 
+	border-bottom: 1px solid #eee; background: #fff; }
+
+.main-post .post-top-area,
+.main-post .post-bottom-area{ margin: 0 70px; }
+
+.main-post .pre-title{ margin-bottom: 20px; color: #777; }
+
+.main-post .title{ margin-bottom: 30px; }
+
+.main-post .para{ margin: 30px 0; }
+
+.main-post ul.tags{ margin: 30px 0; }
+
+.main-post ul.tags > li > a{ padding: 7px 10px; margin-bottom: 10px; margin-right: 10px; float: left; 
+	border: 1px solid #ddd; background: #ddd; }
+
+.main-post ul.tags > li > a:hover{ background: none; }
+
+
+/* ICONS */
+
+.main-post .post-icons-area{ margin: 30px 0; padding: 30px 0; overflow: hidden; 
+	border-bottom: 1px solid #ddd; }
+
+.main-post ul.post-icons{ float: left; }
+
+.main-post ul.post-icons > li > a{ padding-right: 15px; }
+
+.main-post ul.post-icons > li > a > i{ padding-right: 10px; font-size: 1.1em; opacity: .5; }
+
+.main-post ul.icons{ float: right; }
+
+.main-post ul.icons > li > a > i{ padding-left: 15px; font-size: 1.1em; opacity: .5; }
+
+
+/* POST FOOTER */
+
+.main-post .post-footer.post-info{ margin-top: 30px; padding-right: 30px; }
+
+.main-post .post-footer{ margin-bottom: 30px; }
+
+.footer-logo{
+	width: 350px;
+}
+
+
 
 /* ---------------------------------
 10. FOOTER
