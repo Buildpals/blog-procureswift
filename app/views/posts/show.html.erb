@@ -12,7 +12,7 @@
 
 						<div class="post-top-area">
 
-							<h5 class="pre-title">FASHION</h5>
+							<h5 class="pre-title"><%= @post.catergory %></h5>
 
 							<h3 class="title"><a href="#"><b><%= @post.title %></b></a></h3>
 
@@ -29,7 +29,7 @@
 
 							</div><!-- post-info -->
 
-							<p class="para"><%= @post.content %></p>
+							<p class="para"><%= divide_content_in_two @post.content.to_plain_text %></p>
 
 						</div><!-- post-top-area -->
 
@@ -37,11 +37,7 @@
 
 						<div class="post-bottom-area">
 
-							<p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-							ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint
-							occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+							<p class="para"><%= divide_content_in_two @post.content.to_plain_text, 2 %></p>
 
 							<ul class="tags">
 							</ul>

@@ -2,14 +2,23 @@
   <%= form_with scope: :post, url: posts_url, local: true do |form| %>
     <p>
       <%= form.label :title %><br>
-      <%= form.text_field :title, { class: 'form-control' } %>
-    </p>    
+      <%= form.text_field :title, { class: 'form-control mb-2' } %>
+    </p> 
+    <p>
+      <%= form.label :main_image %>
+      <%= form.file_field :main_image, direct_upload: true, class: 'form-control mb-3' %>
+    </p>
+    <p>
+      <%= form.label 'Draft?' %>
+      <%= form.check_box :draft %>
+    </p>
+    <p>
+      <%= form.label :catergory, class: 'mt-2' %>
+      <%= form.select :catergory, { Marketing: 'marketing', 'Company news': 'company_news', Engineering: 'engineering' }, {} ,class: 'form-control mb-3' %>
+    </p>
     <p>
       <%= form.label :content %><br>
       <%= form.rich_text_area :content %>
-    </p>
-    <p>
-      <%= form.file_field :main_image, direct_upload: true %>
     </p>
     
     <p>
