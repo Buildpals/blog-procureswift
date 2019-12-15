@@ -5,6 +5,10 @@
       <%= form.text_field :title, { class: 'form-control mb-2' } %>
     </p> 
     <p>
+      <%= form.label :sub_title %><br>
+      <%= form.text_field :sub_title, { class: 'form-control mb-2' } %>
+    </p> 
+    <p>
       <%= form.label :main_image %>
       <%= form.file_field :main_image, direct_upload: true, class: 'form-control mb-3' %>
     </p>
