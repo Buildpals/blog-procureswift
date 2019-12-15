@@ -16,16 +16,16 @@
 
 							<h3 class="title"><a href="#"><b><%= @post.title %></b></a></h3>
 
-							<h4 class="title"><a href="#"><%= @post.title %></a></h4>
+							<h4 class="title"><a href="#"><%= @post.sub_title %></a></h4>
 
 							<div class="post-info">
 
 								<div class="left-area">
-									<a class="avatar" href="#"><img src="/images/avatar-1-120x120.jpg" alt="Profile Image"></a>
+									<a class="avatar" href="#"><img src="<%= url_for(@post.user.avatar) %>" alt="Profile Image"></a>
 								</div>
 
 								<div class="middle-area">
-									<a class="name" href="#"><b>Katy Liu</b></a>
+									<a class="name" href="#"><b><%= @post.user.full_name %></b></a>
 									<h6 class="date">on <%= @post.created_at.strftime("%m/%d/%Y")   %></h6>
 								</div>
 
@@ -50,11 +50,11 @@
 							<div class="post-footer post-info">
 
 								<div class="left-area">
-									<a class="avatar" href="#"><img src="/images/avatar-1-120x120.jpg" alt="Profile Image"></a>
+									<a class="avatar" href="#"><img src="<%= url_for(@post.user.avatar) %>" alt="Profile Image"></a>
 								</div>
 
 								<div class="middle-area">
-									<a class="name" href="#"><b>Katy Liu</b></a>
+									<a class="name" href="#"><b><%= @post.user.full_name %></b></a>
 									<h6 class="date">on <%= @post.created_at.strftime("%m/%d/%Y")  %></h6>
 								</div>
 
@@ -80,9 +80,9 @@
                       <img src="https://res.cloudinary.com/tenderswift/image/upload/v1574635669/ProcureSwiftLogos/procureswift-logo-large.png" alt="Logo Image" class="footer-logo">
                     </a>
                     <ul class="icons">
-                        <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+                        <li><a href="https://web.facebook.com/procureswift/"><i class="ion-social-facebook-outline"></i></a></li>
                         <li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
-                        <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        <li><a href="https://www.instagram.com/procureswift/"><i class="ion-social-instagram-outline"></i></a></li>
                     </ul>
 
                 </div><!-- footer-section -->

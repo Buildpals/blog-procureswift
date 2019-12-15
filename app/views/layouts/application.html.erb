@@ -15,11 +15,20 @@
     <header>
         <div class="container-fluid position-relative no-side-padding">
 
-            <a href="#" class="logo"><img src="https://res.cloudinary.com/tenderswift/image/upload/v1574635669/ProcureSwiftLogos/procureswift-logo-large.png" alt="Logo Image"></a>
+            <a href="/" class="logo"><img src="https://res.cloudinary.com/tenderswift/image/upload/v1574635669/ProcureSwiftLogos/procureswift-logo-large.png" alt="Logo Image"></a>
 
-            <div class="src-area">
-                <button class="btn btn-warning mt-3 mr-3 float-right">Ask the ProcureSwift Blog</button>
-            </div>
+            <% unless user_signed_in? %>
+              <div class="src-area">
+                  <button class="btn btn-warning mt-3 mr-3 float-right">Ask the ProcureSwift Blog</button>
+              </div>
+            <% end %>
+            <% if user_signed_in? %>
+              <ul class="main-menu visible-on-click float-right" id="main-menu">
+                <li><a class="nav-link" href="<%= posts_path %>">Blogs</a></li>
+                <li> <%= link_to current_user.full_name, edit_user_registration_path, class: 'dropdown-item' %></li>
+                <li><%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %></li>
+              </ul>
+          <% end %>
 
         </div><!-- conatiner -->
     </header>

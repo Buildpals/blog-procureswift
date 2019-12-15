@@ -1,2 +1,32 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="container">
+  <%= form_with(model: @post, local: false) do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title, { class: 'form-control mb-2' } %>
+    </p> 
+    <p>
+      <%= form.label :sub_title %><br>
+      <%= form.text_field :sub_title, { class: 'form-control mb-2' } %>
+    </p> 
+    <p>
+      <%= form.label :main_image %>
+      <%= form.file_field :main_image, direct_upload: true, class: 'form-control mb-3' %>
+    </p>
+    <p>
+      <%= form.label 'Draft?' %>
+      <%= form.check_box :draft %>
+    </p>
+    <p>
+      <%= form.label :catergory, class: 'mt-2' %>
+      <%= form.select :catergory, { Marketing: 'Marketing', 'Company news': 'company_news', Engineering: 'Engineering' }, {} ,class: 'form-control mb-3' %>
+    </p>
+    <p>
+      <%= form.label :content %><br>
+      <%= form.rich_text_area :content %>
+    </p>
+    
+    <p>
+      <%= form.submit class: 'btn btn-warning mt-3 float-right' %>
+    </p>
+  <% end %>
+</div>
