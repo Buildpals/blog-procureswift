@@ -17,6 +17,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     @post.save
+    flash[:notice] = 'Post has been successfully created. If you want users to see, you\'ll have to untick the draft option.'
     redirect_to @post
   end
 
@@ -36,10 +37,14 @@ class PostsController < ApplicationController
 
   def update
     @post.update(post_params)
+    flash[:notice] = 'Post has been successfully updated.'
     redirect_to @post
   end
 
   def destroy
+    @post.destroy
+    flash[:notice] = 'Post has been successfully deleted.'
+    redirect_to posts_path
   end
 
   private
